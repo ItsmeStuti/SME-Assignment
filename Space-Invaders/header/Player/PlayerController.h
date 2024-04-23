@@ -6,7 +6,12 @@
 #include "../../header/Player/PlayerView.h"
 
 namespace Player
-{
+{   
+
+   //modify the Player class to enable firing simple bullets. We'll also implement a delay between each bullet fired.
+   public:
+    void fireSimpleBullet();
+
     class PlayerController : public Collision::ICollider
     {
     private:
@@ -62,4 +67,12 @@ namespace Player
         const sf::Sprite& getColliderSprite() override;
         void onCollision(ICollider* other_collider) override;
     };
+}
+void Player::fireSimpleBullet() {
+    // Check if enough time has passed since the last bullet was fired
+    if (/* Check delay condition */) {
+        // Create and spawn a simple bullet
+        // Add the bullet to the game world
+        // Reset the firing delay timer
+    }
 }
