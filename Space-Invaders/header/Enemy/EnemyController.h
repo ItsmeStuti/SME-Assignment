@@ -10,6 +10,9 @@ namespace Enemy
     enum class EnemyType;
     enum class EnemyState;
 
+    public:
+    void fireFrostBeam();  //modify the classes representing different enemy types to enable them to fire their respective types of bullets with delays between each shot.
+
     class EnemyController : public Collision::ICollider
     {
     protected:
@@ -47,4 +50,12 @@ namespace Enemy
 
         virtual void processScore();
     };
+}
+void Enemy::fireFrostBeam() {
+    // Check if enough time has passed since the last beam was fired
+    if (/* Check delay condition */) {
+        // Create and spawn a frost beam
+        // Add the beam to the game world
+        // Reset the firing delay timer
+    }
 }
